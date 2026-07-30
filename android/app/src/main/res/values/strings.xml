@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">com.drblaze.myapp</string>
-    <string name="title_activity_main">com.drblaze.myapp</string>
+    <string name="app_name">Pharmacy Curriculum</string>
+<string name="title_activity_main">Pharmacy Curriculum</string>
     <string name="package_name">com.drblaze.myapp</string>
     <string name="custom_url_scheme">com.drblaze.myapp</string>
 </resources>
