@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>چارت دروس داروسازی</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<div id="modal" class="modal hidden">
+
+    <div class="modal-content">
+
+        <button id="closeModal">✖</button>
+
+        <h2 id="modalTitle"></h2>
+
+        <div id="modalBody"></div>
+
+    </div>
+
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+<button class="action-button" onclick="exportImage()">
+    دانلود نتایج
+</button>
+
+
+
+
+<body>
+
+<header>
+
+    <h1>چارت دروس داروسازی</h1>
+
+    <div id="creditInfo">
+
+        <span>
+            واحد پاس شده:
+            <b id="passedCredits">0</b>
+        </span>
+    
+        <span>
+            واحد باقی مانده:
+            <b id="remainingCredits">0</b>
+        </span>
+    
+    </div>
+    
+</header>
+
+
+<div class="legend">
+
+    <h3>راهنمای وضعیت</h3>
+
+    <div class="legend-grid">
+
+        <div class="legend-item">
+            <span class="legend-color passed"></span>
+            <span>درس پاس یا اخذ شده (✅)</span>
+        </div>
+
+        <div class="legend-item">
+            <span class="legend-color available"></span>
+            <span>قابل اخذ (🤔)</span>
+        </div>
+
+        <div class="legend-item">
+            <span class="legend-color locked"></span>
+            <span>قفل / پیش‌نیاز پاس نشده (🚫)</span>
+        </div>
+
+        <div class="legend-item">
+            <button class="legend-btn">⭐</button>
+            <span>نمایش دروس هم‌نیاز </span>
+        </div>
+
+        <div class="legend-item">
+            <button class="legend-btn">دروس آینده</button>
+            <span>نمایش درس‌هایی که بعدا با پاس شدن این درس باز می‌شوند</span>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="progress-card">
+
+    <div class="progress-header">
+
+        <span>گذرانده شده</span>
+
+        <span id="progressText"></span>
+
+    </div>
+
+    <div class="progress-bar">
+
+        <div id="progressFill"></div>
+
+    </div>
+
+</div>
+
+<main id="semestersContainer">
+
+</main>
+
+
+<!-- پنجره اطلاعات درس -->
+
+<div id="courseModal"
+     class="modal hidden">
+
+    <div class="modal-content">
+
+        <button id="closeModal">
+
+            ✕
+
+        </button>
+
+        <h2 id="modalTitle">
+
+            نام درس
+
+        </h2>
+
+        <div id="modalBody">
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="courses.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
